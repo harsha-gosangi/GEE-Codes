@@ -7,6 +7,9 @@ This project performs Land Use Land Cover (LULC) classification for the Warangal
 
 The objective of this project is to classify major land cover types such as water bodies, vegetation, built-up areas, cropland, and barren land using remote sensing techniques.
 
+**GEE Code Link :** 
+https://code.earthengine.google.com/1b896df89369b1d5fa7504e924765503
+
 **Study Area**
 
 The study area is Warangal, an important urban and agricultural region in Telangana.
