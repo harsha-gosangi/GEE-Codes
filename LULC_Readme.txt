@@ -1,92 +1,82 @@
-# LULC Classification of Warangal using Google Earth Engine
+How to Use
 
-This project performs Land Use Land Cover classification using:
-- Landsat 9 imagery
-- Support Vector Machine (SVM) classifier
-- Google Earth Engine
+Follow these steps to run the LULC classification code.
 
-Classes:
-0 - Water Bodies
-1 - Vegetation
-2 - Built-up
-3 - Cropland
-4 - Barren Land
+1. Open Google Earth Engine
 
-Land Use Land Cover (LULC) Classification – Warangal
-Project Overview
+Go to the Google Earth Engine Code Editor and sign in with your Google account.
 
-This project performs Land Use Land Cover (LULC) classification for the Warangal region using Landsat 9 satellite imagery and Support Vector Machine (SVM) classification in Google Earth Engine.
+2. Create a New Script
 
-The objective of this project is to classify major land cover types such as water bodies, vegetation, built-up areas, cropland, and barren land using remote sensing techniques.
+Click Scripts in the left panel.
 
-Study Area
+Click New → Repository → Script.
 
-The study area is Warangal, which is an important urban and agricultural region in Telangana.
+Give the script a name, for example:
 
-Data Source
+LULC_Warangal
+3. Copy the Code
 
-Satellite imagery used in this project:
+Open the JavaScript file from this repository.
 
-Landsat 9
+Copy the entire code.
 
-Collection: LANDSAT/LC09/C02/T1_L2
+Paste it into the script editor.
 
-Year: 2022
+4. Import Training Data
 
-Cloud Cover: < 5%
+Before running the script, upload or draw the training samples for the following classes:
 
-Spectral bands used:
+WaterBodies
 
-SR_B1 – Coastal
+Vegetation
 
-SR_B2 – Blue
+Built-up
 
-SR_B3 – Green
+CropLand
 
-SR_B4 – Red
+BarrenLand
 
-SR_B5 – Near Infrared (NIR)
+These training polygons should contain a class property corresponding to the class label.
 
-SR_B6 – Shortwave Infrared 1
+Example:
 
-SR_B7 – Shortwave Infrared 2
+0 = Water
+1 = Vegetation
+2 = Built-up
+3 = Cropland
+4 = Barren Land
+5. Run the Script
 
-Methodology
-1 Data Preprocessing
+Click the Run button in the Earth Engine editor.
 
-Filter Landsat 9 imagery by date and cloud cover
+The script will:
+
+Load Landsat 9 imagery
+
+Filter images by date and cloud cover
 
 Clip imagery to the Warangal boundary
 
-Generate mean composite image
-
-2 Training Data Preparation
-
-Training samples were created for the following classes:
-
-Class	Land Cover Type
-0	Water Bodies
-1	Vegetation
-2	Built-up
-3	Cropland
-4	Barren Land
-3 Classification
-
-The classification was performed using Support Vector Machine (SVM) implemented in Google Earth Engine.
-
-Steps:
-
-Extract spectral values from training points
-
-Split data into training and testing sets
-
 Train the SVM classifier
 
-Generate LULC map
+Generate the LULC classification map
 
-4 Accuracy Assessment
+6. Export the Result
 
-Accuracy evaluation was performed using:
+The script exports the classified image to Google Drive as a GeoTIFF file.
+
+You can download and open it in:
+
+QGIS
+
+ArcGIS
+
+Any GIS software
+
+7. Check Accuracy
+
+The script automatically calculates:
 
 Confusion Matrix
 
@@ -98,15 +88,6 @@ Producer Accuracy
 
 Consumer Accuracy
 
-Output
+These values will appear in the Console panel.
 
-The final classified LULC map was exported as GeoTIFF.
-
-Classes visualization:
-
-Class	Color
-Water	Blue
-Vegetation	Dark Green
-Built-up	Red
-Cropland	Brown
 Barren Land	Yellow
