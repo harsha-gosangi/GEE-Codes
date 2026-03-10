@@ -1,6 +1,6 @@
-**Land Use Land Cover (LULC) Classification – Warangal
+**Land Use Land Cover (LULC) Classification – Warangal**
 Project Overview
-**
+
 This project performs Land Use Land Cover (LULC) classification for the Warangal region using Landsat 9 satellite imagery and Support Vector Machine (SVM) classification in Google Earth Engine.
 
 The objective of this project is to classify major land cover types such as water bodies, vegetation, built-up areas, cropland, and barren land using remote sensing techniques.
